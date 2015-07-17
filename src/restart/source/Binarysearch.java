@@ -10,9 +10,7 @@ public class Binarysearch {
     }
 
     int search(int low, int high) {
-        if (low > high) {
-            return -1;
-        } else {
+        if (low < high) {
             int mid = (low + high) / 2;
             if (x == a[mid]) {
                 return mid;
@@ -22,6 +20,7 @@ public class Binarysearch {
                 return search(mid + 1, high);
             }
         }
+        return -1;
     }
-
 }
+

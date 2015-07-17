@@ -4,13 +4,17 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        long startTime = System.currentTimeMillis();
         Mergesort mergesort = new Mergesort();
         int[] a = randomarray();
 
         System.out.println(Arrays.toString(a) + "\n");                      // Print arrays for clarity
         mergesort.divide(a);
         a = mergesort.cleanup(a);                                           // Remove 0s that were set by merge
-        System.out.println(Arrays.toString(a));                             // Final value of array a
+        System.out.println(Arrays.toString(a) + "\n");                      // Final value of array a
+        long endTime   = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println("Time: " + totalTime);
     }
 
     static int[] randomarray() {

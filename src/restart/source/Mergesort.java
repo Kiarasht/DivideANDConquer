@@ -13,7 +13,7 @@ public class Mergesort {
         }
     }
 
-    public void merge(int[] a, int[] u, int[] v) {                          // merge will not ignore duplicates
+    public void merge(int[] a, int[] u, int[] v) {                          // merge will ignore duplicates
         int i, j, k;
         i = j = k = 0;
         while (i < u.length + v.length) {                                   // If a array has space
@@ -38,7 +38,7 @@ public class Mergesort {
         }
     }
 
-    public void mergenoduplicate(int[] a, int[] u, int[] v) {               // mergenoduplicate ignores duplicates
+    public void mergenoduplicate(int[] a, int[] u, int[] v) {               // mergenoduplicate will not ignores duplicates
         int i, j, k;                                                        // It needs help from cleanup 
         i = j = k = 0;
         while (j < u.length && k < v.length) {                              // If both arrays have elements left
